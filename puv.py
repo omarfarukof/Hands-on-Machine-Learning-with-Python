@@ -47,15 +47,12 @@ file_lists = [f for f in file_lists if f not in file_ignore]
 # print(file_lists)
 
 # copy the file_lists into project directory if they do not exist
-for f in file_lists:
-    file_path = os.path.join(str(venv_path), str(f))
-    if not os.path.exists(f'{project_path}/{f}') or force_replace:
-        # print(f"Copying {file_path} into project directory...")
-        # os.system(f"cp -r {file_path} {project_path}")
-        # print(f"cp {file_path} {project_path}/{f}")
+for fl in file_lists:
+    file_path = os.path.join(str(venv_path), str(fl))
+    if not os.path.exists(f'{project_path}/{fl}') or force_replace:
         if force_replace:
-            os.system(f'rm -r {project_path}/{f}')
-        os.system(f"cp -r {file_path} {project_path}/{f}")
+            os.system(f'rm -r {project_path}/{fl}')
+        os.system(f"cp -r {file_path} {project_path}/{fl}")
         
 
-print(f"\n# PUV DONE\n-------------------------")
+print("\n# PUV DONE\n-------------------------")
