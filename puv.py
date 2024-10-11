@@ -28,19 +28,22 @@ if venv_path is not None:
     os.chdir(venv_path)
     # print current working directory
 
-if sys.argv[-1] == '@force_replace':
-    argv = sys.argv[1:-1]
-    force_replace = True
-    print("Forcing replace...\n-------------------------\n\n")
-else:
-    force_replace = False
-    argv = sys.argv[1:]
+# if sys.argv[-1] == '@force_replace':
+#     argv = sys.argv[1:-1]
+#     force_replace = True
+#     print("Forcing replace...\n-------------------------\n\n")
+# else:
+#     force_replace = False
+#     argv = sys.argv[1:]
+
+force_replace = True
+argv = sys.argv[1:]
 
 input_argv = ' '.join(argv) 
 
 os.system(f"rye {input_argv}")
 
-file_ignore = ['.venv' , '.directory' , 'src']
+file_ignore = ['.venv' , '.directory' , 'src' , 'README.md']
 file_lists = os.listdir()
 # remove .venv from file lists
 file_lists = [f for f in file_lists if f not in file_ignore]
