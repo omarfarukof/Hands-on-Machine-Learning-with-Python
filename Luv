@@ -1,0 +1,9 @@
+#!/bin/bash
+cd $VENV_PATH
+cd ..
+
+ls -al
+# give all the args into uv and run uv
+uv $@
+
+# copy all the files and folders 
