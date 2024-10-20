@@ -1,0 +1,9 @@
+# git
+.gitignore merge=ours
+
+# python
+pyproject.toml merge=ours
+
+# rye
+requirements-dev.lock merge=ours
+requirements.lock merge=ours
