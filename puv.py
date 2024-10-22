@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -6,6 +6,9 @@ import sys
 file_path = os.path.abspath(__file__)
 project_path = os.path.dirname(file_path)
 
+def copy_files(from_path , to_path , files = ['.python-version' , 'pyproject.toml' , 'requirements.lock' , 'requirements-dev.lock']):
+    for fl in files:
+        os.system(f"cp -r {file_path} {project_path}/{fl}")
 
 # load environment variables from .envrc file if it exists , Load VENV_PATH from .envrc file
 venv_path = None
@@ -56,6 +59,9 @@ for fl in file_lists:
         if force_replace:
             os.system(f'rm -r {project_path}/{fl}')
         os.system(f"cp -r {file_path} {project_path}/{fl}")
-        
+
+
+
+
 
 print("\n# PUV DONE\n-------------------------")
