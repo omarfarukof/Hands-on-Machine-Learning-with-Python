@@ -69,6 +69,8 @@ jedi==0.19.1
     # via ipython
 jinja2==3.1.4
     # via nbconvert
+joblib==1.4.2
+    # via scikit-learn
 jsonschema==4.23.0
     # via nbformat
 jsonschema-specifications==2024.10.1
@@ -129,6 +131,7 @@ numpy==1.26.4
     # via matplotlib
     # via ml-dtypes
     # via pandas
+    # via scikit-learn
     # via scipy
     # via seaborn
     # via tensorboard
@@ -201,8 +204,11 @@ rich==13.9.2
 rpds-py==0.20.0
     # via jsonschema
     # via referencing
+scikit-learn==1.5.2
+    # via hands-on-machine-learning-with-python
 scipy==1.14.1
     # via hands-on-machine-learning-with-python
+    # via scikit-learn
 seaborn==0.13.2
     # via hands-on-machine-learning-with-python
 setuptools==75.1.0
@@ -230,6 +236,8 @@ tensorflow==2.17.0
     # via hands-on-machine-learning-with-python
 termcolor==2.5.0
     # via tensorflow
+threadpoolctl==3.5.0
+    # via scikit-learn
 tinycss2==1.3.0
     # via nbconvert
 tornado==6.4.1

@@ -56,6 +56,8 @@ ipython==8.28.0
     # via ipykernel
 jedi==0.19.1
     # via ipython
+joblib==1.4.2
+    # via scikit-learn
 jupyter-client==8.6.3
     # via ipykernel
 jupyter-core==5.7.2
@@ -96,6 +98,7 @@ numpy==1.26.4
     # via matplotlib
     # via ml-dtypes
     # via pandas
+    # via scikit-learn
     # via scipy
     # via seaborn
     # via tensorboard
@@ -153,8 +156,11 @@ requests==2.32.3
     # via tensorflow
 rich==13.9.2
     # via keras
+scikit-learn==1.5.2
+    # via hands-on-machine-learning-with-python
 scipy==1.14.1
     # via hands-on-machine-learning-with-python
+    # via scikit-learn
 seaborn==0.13.2
     # via hands-on-machine-learning-with-python
 setuptools==75.1.0
@@ -179,6 +185,8 @@ tensorflow==2.17.0
     # via hands-on-machine-learning-with-python
 termcolor==2.5.0
     # via tensorflow
+threadpoolctl==3.5.0
+    # via scikit-learn
 tornado==6.4.1
     # via ipykernel
     # via jupyter-client
